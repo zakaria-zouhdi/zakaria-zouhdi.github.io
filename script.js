@@ -27,7 +27,7 @@ window.addEventListener("pointermove", (event) => {
   }
 });
 
-const sectionIds = ["profile", "services", "work", "approach", "contact"];
+const sectionIds = ["profile", "services", "portfolio", "approach", "contact"];
 const sections = sectionIds
   .map((id) => document.getElementById(id))
   .filter(Boolean);
