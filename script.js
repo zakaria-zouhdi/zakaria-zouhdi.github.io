@@ -1,25 +1,28 @@
 ﻿const hero = document.querySelector(".hero-media");
-const reactiveElements = document.querySelectorAll(
-  ".button, .credential-plate, .capability-strip article, .service-card, .work-item, .contact-panel"
-);
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const coarsePointer = window.matchMedia("(pointer: coarse)");
+
+let frame = 0;
+let nextX = 72;
+let nextY = 22;
+
+function trackingAllowed() {
+  return hero && !reduceMotion.matches && !coarsePointer.matches;
+}
+
+function updateHeroLight() {
+  frame = 0;
+  hero.style.setProperty("--hero-x", `${nextX}%`);
+  hero.style.setProperty("--hero-y", `${nextY}%`);
+}
 
 window.addEventListener("pointermove", (event) => {
-  const x = Math.round((event.clientX / window.innerWidth) * 100);
-  const y = Math.round((event.clientY / window.innerHeight) * 100);
+  if (!trackingAllowed()) return;
 
-  if (hero) {
-    hero.style.setProperty("--cursor-x", `${x}%`);
-    hero.style.setProperty("--cursor-y", `${y}%`);
+  nextX = Math.round((event.clientX / window.innerWidth) * 100);
+  nextY = Math.round((event.clientY / window.innerHeight) * 100);
+
+  if (!frame) {
+    frame = window.requestAnimationFrame(updateHeroLight);
   }
-});
-
-reactiveElements.forEach((element) => {
-  element.addEventListener("pointermove", (event) => {
-    const rect = element.getBoundingClientRect();
-    const x = Math.round(((event.clientX - rect.left) / rect.width) * 100);
-    const y = Math.round(((event.clientY - rect.top) / rect.height) * 100);
-
-    element.style.setProperty("--local-x", `${x}%`);
-    element.style.setProperty("--local-y", `${y}%`);
-  });
 });
