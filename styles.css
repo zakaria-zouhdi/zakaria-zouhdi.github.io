@@ -1860,3 +1860,91 @@ body.enhanced .section.is-visible {
     flex-basis: 188px;
   }
 }
+/* Deliverable strip controls and conventional heatmap colors */
+.artifact-control {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) 38px;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.artifact-control .artifact-strip {
+  min-width: 0;
+}
+
+.artifact-scroll-button {
+  position: relative;
+  border: 1px solid rgba(201, 164, 93, 0.34);
+  color: var(--gold);
+  font-family: "Barlow Condensed", Roboto, "Open Sans", Arial, sans-serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(180deg, rgba(8, 6, 4, 0.72), rgba(8, 6, 4, 0.32));
+  cursor: pointer;
+  transition: border-color 220ms ease, color 220ms ease, background 220ms ease, transform 220ms ease;
+}
+
+.artifact-scroll-button:hover,
+.artifact-scroll-button:focus-visible {
+  border-color: rgba(244, 238, 227, 0.48);
+  color: var(--ivory);
+  background: rgba(244, 238, 227, 0.04);
+  transform: translateY(-2px);
+}
+
+.artifact-scroll-button:focus-visible {
+  outline: 2px solid rgba(244, 238, 227, 0.86);
+  outline-offset: 4px;
+}
+
+.axis-title {
+  fill: var(--gold);
+}
+
+.risk-axis text {
+  fill: rgba(201, 164, 93, 0.78);
+}
+
+.risk-low {
+  fill: rgba(43, 88, 173, 0.32);
+}
+
+.risk-low-2 {
+  fill: rgba(53, 128, 194, 0.42);
+}
+
+.risk-gold-1 {
+  fill: rgba(82, 157, 120, 0.44);
+}
+
+.risk-gold-2 {
+  fill: rgba(224, 185, 72, 0.58);
+}
+
+.risk-gold-3 {
+  fill: rgba(231, 135, 54, 0.68);
+}
+
+.risk-red-1 {
+  fill: rgba(198, 68, 50, 0.78);
+}
+
+.risk-red-2 {
+  fill: rgba(195, 24, 45, 0.92);
+}
+
+.risk-cells rect {
+  stroke: rgba(244, 238, 227, 0.16);
+}
+
+@media (max-width: 640px) {
+  .artifact-control {
+    grid-template-columns: 32px minmax(0, 1fr) 32px;
+    gap: 8px;
+  }
+
+  .artifact-scroll-button {
+    font-size: 1.35rem;
+  }
+}

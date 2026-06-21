@@ -83,3 +83,20 @@ if (sections.length) {
     sections.forEach((section) => section.classList.add("is-visible"));
   }
 }
+const artifactControl = document.querySelector("[data-artifact-control]");
+
+if (artifactControl) {
+  const artifactStrip = artifactControl.querySelector("[data-artifact-strip]");
+  const scrollButtons = artifactControl.querySelectorAll("[data-artifact-scroll]");
+
+  scrollButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!artifactStrip) return;
+      const direction = button.dataset.artifactScroll === "prev" ? -1 : 1;
+      artifactStrip.scrollBy({
+        left: direction * Math.max(220, artifactStrip.clientWidth * 0.72),
+        behavior: reduceMotion.matches ? "auto" : "smooth",
+      });
+    });
+  });
+}
