@@ -27,7 +27,7 @@ window.addEventListener("pointermove", (event) => {
   }
 });
 
-const sectionIds = ["profile", "services", "portfolio", "approach", "contact"];
+const sectionIds = ["profile", "services", "deliverables", "portfolio", "approach", "contact"];
 const sections = sectionIds
   .map((id) => document.getElementById(id))
   .filter(Boolean);
@@ -82,4 +82,33 @@ if (sections.length) {
   } else {
     sections.forEach((section) => section.classList.add("is-visible"));
   }
+}
+
+const deliverableRoot = document.querySelector("[data-deliverables]");
+
+if (deliverableRoot) {
+  const deliverableNodes = Array.from(deliverableRoot.querySelectorAll(".deliverable-node"));
+  const previewStage = deliverableRoot.querySelector(".preview-stage");
+  const previewTitle = deliverableRoot.querySelector(".deliverable-preview h3");
+  const previewDetail = deliverableRoot.querySelector(".preview-detail");
+  const previewProof = deliverableRoot.querySelector(".preview-proof");
+
+  function setDeliverable(node) {
+    if (!node) return;
+
+    deliverableNodes.forEach((item) => item.classList.toggle("is-active", item === node));
+
+    if (previewStage) previewStage.textContent = node.dataset.stage || "Deliverable";
+    if (previewTitle) previewTitle.textContent = node.dataset.title || node.querySelector("strong")?.textContent || "Deliverable";
+    if (previewDetail) previewDetail.textContent = node.dataset.detail || "";
+    if (previewProof) previewProof.textContent = node.dataset.proof || "";
+  }
+
+  deliverableNodes.forEach((node) => {
+    node.addEventListener("click", () => setDeliverable(node));
+    node.addEventListener("focus", () => setDeliverable(node));
+    node.addEventListener("pointerenter", () => {
+      if (!coarsePointer.matches) setDeliverable(node);
+    });
+  });
 }

@@ -27,6 +27,7 @@
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="#profile">Profile</a>
           <a href="#services">Services</a>
+          <a href="#deliverables">Deliverables</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#approach">Approach</a>
           <a href="#contact">Contact</a>
@@ -35,6 +36,7 @@
       <nav class="section-index" aria-label="Section index">
         <a href="#profile">Profile</a>
         <a href="#services">Services</a>
+        <a href="#deliverables">Deliverables</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#approach">Approach</a>
         <a href="#contact">Contact</a>
@@ -64,37 +66,6 @@
                 <span>industrial R&amp;D</span>
                 <span>executive decision support</span>
               </aside>
-            </div>
-
-            <div class="control-plate" aria-hidden="true">
-              <div class="plate-shell">
-                <div class="plate-header">
-                  <span>Program control</span>
-                  <span>review state</span>
-                </div>
-                <div class="plate-status">
-                  <span>decision material</span>
-                  <strong>controlled execution</strong>
-                </div>
-                <div class="plate-track">
-                  <span>scope</span>
-                  <span>baseline</span>
-                  <span>risk</span>
-                  <span>validation</span>
-                  <span>decision</span>
-                </div>
-                <div class="plate-signal"></div>
-                <div class="plate-frames">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="plate-footer">
-                  <span>requirements</span>
-                  <span>estimate</span>
-                  <span>change</span>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -171,6 +142,54 @@
           </div>
         </section>
 
+        <section class="section deliverables-section" id="deliverables">
+          <div class="section-heading deliverables-heading">
+            <p class="section-kicker">Deliverables</p>
+            <h2>The working outputs that make technical delivery inspectable.</h2>
+          </div>
+
+          <div class="deliverable-system" data-deliverables>
+            <div class="deliverable-map" aria-label="Deliverable production flow">
+              <button class="deliverable-node is-active" type="button" data-stage="Frame" data-title="Program framing brief" data-detail="Context, stakeholders, objectives, assumptions, constraints, governance choices, and required decisions captured before delivery accelerates." data-proof="Used when the work is still ambiguous and leadership needs a clean starting point.">
+                <span>01</span>
+                <strong>Program framing brief</strong>
+                <small>context / objectives / governance</small>
+              </button>
+              <button class="deliverable-node" type="button" data-stage="Define" data-title="Requirements and acceptance map" data-detail="Business needs, technical constraints, acceptance criteria, traceability, open questions, and ownership made visible before implementation choices harden." data-proof="Useful when engineering, operations, suppliers, and management are carrying different versions of the same problem.">
+                <span>02</span>
+                <strong>Requirements and acceptance map</strong>
+                <small>needs / criteria / traceability</small>
+              </button>
+              <button class="deliverable-node" type="button" data-stage="Baseline" data-title="Integrated schedule baseline" data-detail="Milestones, dependencies, resources, estimate basis, critical path, review gates, and delivery assumptions organized into a trackable baseline." data-proof="Built so progress can be measured against something sturdier than optimism and meeting memory.">
+                <span>03</span>
+                <strong>Integrated schedule baseline</strong>
+                <small>milestones / estimates / dependencies</small>
+              </button>
+              <button class="deliverable-node" type="button" data-stage="De-risk" data-title="Risk and investigation plan" data-detail="Technical unknowns, issue hypotheses, investigation strategy, validation path, owners, fallback options, and escalation triggers structured for action." data-proof="Especially relevant for embedded, RF, pyrotechnic, and field-operational systems where failures need a disciplined search pattern.">
+                <span>04</span>
+                <strong>Risk and investigation plan</strong>
+                <small>unknowns / tests / fallbacks</small>
+              </button>
+              <button class="deliverable-node" type="button" data-stage="Validate" data-title="Integration and validation pack" data-detail="Evidence planning across embedded systems, software, RF behavior, suppliers, manufacturing constraints, field operations, and acceptance activity." data-proof="Turns validation from a late panic into a visible delivery stream with owners and decision points.">
+                <span>05</span>
+                <strong>Integration and validation pack</strong>
+                <small>evidence / suppliers / acceptance</small>
+              </button>
+              <button class="deliverable-node" type="button" data-stage="Decide" data-title="Steering and decision package" data-detail="Status, risk movement, options, change impacts, recommended decisions, and next arbitration points prepared for senior management or C-suite review." data-proof="The output that lets leadership decide without drowning in raw engineering detail.">
+                <span>06</span>
+                <strong>Steering and decision package</strong>
+                <small>status / options / arbitration</small>
+              </button>
+            </div>
+
+            <aside class="deliverable-preview" aria-live="polite">
+              <p class="preview-stage">Frame</p>
+              <h3>Program framing brief</h3>
+              <p class="preview-detail">Context, stakeholders, objectives, assumptions, constraints, governance choices, and required decisions captured before delivery accelerates.</p>
+              <p class="preview-proof">Used when the work is still ambiguous and leadership needs a clean starting point.</p>
+            </aside>
+          </div>
+        </section>
         <section class="section work-section" id="portfolio">
           <div class="section-heading work-heading">
             <p class="section-kicker">Portfolio</p>
