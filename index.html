@@ -199,207 +199,133 @@
           </div>
         </section>
         <section class="section methods-section" id="approach">
-          <div class="section-heading methods-heading">
+          <div class="section-heading methods-heading method-evidence-heading">
             <p class="section-kicker">Methods</p>
-            <h2>How technical uncertainty gets turned into decisions.</h2>
+            <h2>Delivery practice, made visible.</h2>
+            <p>
+              These are examples of the working artifacts used to keep complex technical delivery inspectable: scope, schedule, risk, responsibility, dependencies, evidence, and decision flow. The point is not decoration. It is to show how ambiguity gets turned into a governed plan that technical teams and business stakeholders can both use.
+            </p>
           </div>
 
-          <div class="method-stack">
-            <article class="method-plate method-plate-primary" tabindex="0">
-              <div class="method-copy">
-                <p class="method-index">01 / Investigation flow</p>
-                <h3>Wireless RF integration failure, handled as a controlled investigation.</h3>
-                <p>
-                  Built for late-stage integration where bench behavior and field behavior diverge,
-                  several technical causes remain plausible, and leadership needs options instead
-                  of guesswork.
-                </p>
+          <div class="method-stack method-evidence">
+            <article class="method-plate evidence-module evidence-module-wide" tabindex="0">
+              <div class="evidence-intro">
+                <div>
+                  <p class="method-index">01 / Operating model</p>
+                  <h3>A governed loop, not a one-way line.</h3>
+                  <p>
+                    Delivery moves forward, but it is never left unsupervised. Decisions flow down into the work, information flows back up, and each review can re-baseline the plan as evidence changes.
+                  </p>
+                </div>
+                <p class="evidence-note">The top rail issues priorities, approvals, and trade-offs. The bottom rail returns progress, evidence, and risk.</p>
               </div>
-              <div class="method-graphic-wrap">
-                <svg class="method-svg investigation-svg" viewBox="0 0 1120 610" role="img" aria-labelledby="investigation-title investigation-desc">
-                  <title id="investigation-title">Risk and investigation plan for an intermittent RF integration failure</title>
-                  <desc id="investigation-desc">A controlled investigation flow showing trigger, containment, hypothesis map, parallel technical tracks, validation gate, and steering decisions.</desc>
+              <div class="method-graphic-wrap evidence-scroll">
+                <svg class="method-svg operating-svg" viewBox="0 0 1180 344" role="img" aria-labelledby="operating-title operating-desc">
+                  <title id="operating-title">Operating model as a governed delivery loop</title>
+                  <desc id="operating-desc">A delivery flow where decisions move down into every step, information moves up from every step, and a review loop closes the cycle.</desc>
                   <defs>
-                    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                      <path d="M 0 0 L 10 5 L 0 10 z" class="svg-fill-red"></path>
-                    </marker>
-                    <marker id="arrow-soft" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                      <path d="M 0 0 L 10 5 L 0 10 z" class="svg-fill-soft"></path>
-                    </marker>
+                    <marker id="om-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="svg-fill-soft"></path></marker>
+                    <marker id="om-ivory" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="svg-fill-ivory"></path></marker>
                   </defs>
-
-                  <path class="svg-rule" d="M 58 96 H 1055"></path>
-                  <path class="svg-critical" marker-end="url(#arrow-red)" d="M 86 96 H 245 H 410 H 625 H 810"></path>
-
-                  <g class="svg-node svg-node-critical" tabindex="0">
-                    <rect x="42" y="54" width="138" height="84" rx="2"></rect>
-                    <text x="62" y="82">Trigger</text>
-                    <text x="62" y="107" class="svg-small">intermittent RF</text>
-                    <text x="62" y="126" class="svg-small">loss in integration</text>
-                  </g>
-                  <g class="svg-node" tabindex="0">
-                    <rect x="224" y="54" width="144" height="84" rx="2"></rect>
-                    <text x="244" y="82">Contain</text>
-                    <text x="244" y="107" class="svg-small">freeze variables</text>
-                    <text x="244" y="126" class="svg-small">protect baseline</text>
-                  </g>
-                  <g class="svg-node" tabindex="0">
-                    <rect x="410" y="54" width="166" height="84" rx="2"></rect>
-                    <text x="430" y="82">Hypothesis map</text>
-                    <text x="430" y="107" class="svg-small">rank likely causes</text>
-                    <text x="430" y="126" class="svg-small">assign owners</text>
-                  </g>
-                  <g class="svg-node" tabindex="0">
-                    <rect x="626" y="54" width="164" height="84" rx="2"></rect>
-                    <text x="646" y="82">Parallel tracks</text>
-                    <text x="646" y="107" class="svg-small">RF / embedded</text>
-                    <text x="646" y="126" class="svg-small">power / setup</text>
-                  </g>
-                  <g class="svg-node svg-gate" tabindex="0">
-                    <rect x="838" y="54" width="152" height="84" rx="2"></rect>
-                    <text x="858" y="82">Validation gate</text>
-                    <text x="858" y="107" class="svg-small">repeatability and</text>
-                    <text x="858" y="126" class="svg-small">acceptance evidence</text>
-                  </g>
-
-                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 494 142 V 206 H 274"></path>
-                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 494 142 V 206 H 514"></path>
-                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 494 142 V 348 H 274"></path>
-                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 494 142 V 348 H 514"></path>
-
-                  <g class="track-card track-rf" tabindex="0">
-                    <rect x="72" y="202" width="270" height="118" rx="2"></rect>
-                    <text x="96" y="232">RF path</text>
-                    <text x="96" y="259" class="svg-small">signal strength / antenna position</text>
-                    <text x="96" y="280" class="svg-small">interference scan / range envelope</text>
-                    <text x="96" y="301" class="svg-small">bench-to-field delta logged</text>
-                  </g>
-                  <g class="track-card" tabindex="0">
-                    <rect x="392" y="202" width="270" height="118" rx="2"></rect>
-                    <text x="416" y="232">Embedded path</text>
-                    <text x="416" y="259" class="svg-small">timing / pairing state</text>
-                    <text x="416" y="280" class="svg-small">packet loss / firmware edge cases</text>
-                    <text x="416" y="301" class="svg-small">instrumented logs compared</text>
-                  </g>
-                  <g class="track-card" tabindex="0">
-                    <rect x="72" y="344" width="270" height="118" rx="2"></rect>
-                    <text x="96" y="374">Power path</text>
-                    <text x="96" y="401" class="svg-small">transient drops / load behavior</text>
-                    <text x="96" y="422" class="svg-small">battery state / reset conditions</text>
-                    <text x="96" y="443" class="svg-small">failure window reproduced</text>
-                  </g>
-                  <g class="track-card" tabindex="0">
-                    <rect x="392" y="344" width="270" height="118" rx="2"></rect>
-                    <text x="416" y="374">Integration path</text>
-                    <text x="416" y="401" class="svg-small">test setup variance / supplier config</text>
-                    <text x="416" y="422" class="svg-small">environmental repeatability</text>
-                    <text x="416" y="443" class="svg-small">scenario matrix controlled</text>
-                  </g>
-
-                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 662 260 H 726 V 402 H 814"></path>
-                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 662 402 H 814"></path>
-                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 342 260 H 706 V 402 H 814"></path>
-                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 342 402 H 814"></path>
-
-                  <g class="decision-card" tabindex="0">
-                    <rect x="814" y="210" width="246" height="286" rx="2"></rect>
-                    <text x="840" y="242">Decision outputs</text>
-                    <circle cx="846" cy="278" r="4"></circle>
-                    <text x="864" y="284" class="svg-small">accept fix</text>
-                    <circle cx="846" cy="318" r="4"></circle>
-                    <text x="864" y="324" class="svg-small">extend validation</text>
-                    <circle cx="846" cy="358" r="4"></circle>
-                    <text x="864" y="364" class="svg-small">change integration constraint</text>
-                    <circle cx="846" cy="398" r="4"></circle>
-                    <text x="864" y="404" class="svg-small">escalate supplier</text>
-                    <circle cx="846" cy="438" r="4"></circle>
-                    <text x="864" y="444" class="svg-small">revise rollout plan</text>
-                  </g>
-
-                  <path class="svg-critical" marker-end="url(#arrow-red)" d="M 914 138 V 194"></path>
-                  <text x="42" y="552" class="svg-caption">Semantic accent: red marks the active failure path; gold marks formal decision gates.</text>
+                  <path class="rail rail-gold" d="M 33 52 H 1086"></path>
+                  <text class="rail-label rail-label-gold" x="33" y="38">DECISIONS DOWN - priorities / approvals / trade-offs</text>
+                  <path class="rail rail-ivory" d="M 33 286 H 1086"></path>
+                  <text class="rail-label" x="33" y="311">INFORMATION UP - progress / evidence / risk</text>
+                  <g class="flow-drops"><path d="M 107 58 V 124" marker-end="url(#om-gold)"></path><path d="M 288 58 V 124" marker-end="url(#om-gold)"></path><path d="M 469 58 V 124" marker-end="url(#om-gold)"></path><path d="M 650 58 V 124" marker-end="url(#om-gold)"></path><path d="M 831 58 V 124" marker-end="url(#om-gold)"></path><path d="M 1012 58 V 124" marker-end="url(#om-gold)"></path></g>
+                  <g class="flow-returns"><path d="M 107 280 V 212" marker-end="url(#om-ivory)"></path><path d="M 288 280 V 212" marker-end="url(#om-ivory)"></path><path d="M 469 280 V 212" marker-end="url(#om-ivory)"></path><path d="M 650 280 V 212" marker-end="url(#om-ivory)"></path><path d="M 831 280 V 212" marker-end="url(#om-ivory)"></path><path d="M 1012 280 V 212" marker-end="url(#om-ivory)"></path></g>
+                  <g class="flow-links"><path d="M 185 168 H 209" marker-end="url(#om-gold)"></path><path d="M 366 168 H 390" marker-end="url(#om-gold)"></path><path d="M 547 168 H 571" marker-end="url(#om-gold)"></path><path d="M 728 168 H 752" marker-end="url(#om-gold)"></path><path d="M 909 168 H 933" marker-end="url(#om-gold)"></path></g>
+                  <g class="flow-node"><rect x="33" y="128" width="148" height="80" rx="2"></rect><text x="107" y="162">NEED</text><text class="svg-small" x="107" y="185">problem surfaced</text></g>
+                  <g class="flow-node"><rect x="214" y="128" width="148" height="80" rx="2"></rect><text x="288" y="162">FRAME</text><text class="svg-small" x="288" y="185">scope + objectives</text></g>
+                  <g class="flow-node"><rect x="395" y="128" width="148" height="80" rx="2"></rect><text x="469" y="162">ESTIMATE</text><text class="svg-small" x="469" y="185">plan + baseline</text></g>
+                  <g class="flow-node"><rect x="576" y="128" width="148" height="80" rx="2"></rect><text x="650" y="162">STRUCTURE</text><text class="svg-small" x="650" y="185">WBS + ownership</text></g>
+                  <g class="flow-node"><rect x="757" y="128" width="148" height="80" rx="2"></rect><text x="831" y="162">CONTROL</text><text class="svg-small" x="831" y="185">monitor + adjust</text></g>
+                  <g class="flow-node flow-node-gold"><rect x="938" y="128" width="148" height="80" rx="2"></rect><text x="1012" y="162">DELIVER</text><text class="svg-small" x="1012" y="185">accepted output</text></g>
+                  <path class="review-loop" d="M 1086 286 C 1150 268, 1150 70, 1086 52" marker-end="url(#om-gold)"></path>
+                  <text class="review-label" x="1167" y="169" transform="rotate(-90 1167 169)">REVIEW LOOP</text>
+                  <text class="svg-caption" x="33" y="333">Status flows up and decisions flow down at every step, so governance is continuous rather than reserved for the end.</text>
                 </svg>
               </div>
             </article>
 
-            <article class="method-plate" tabindex="0">
-              <div class="method-copy">
-                <p class="method-index">02 / Schedule baseline</p>
-                <h3>Integrated schedule built around gates, evidence, and decision timing.</h3>
-                <p>
-                  The schedule is not a lifecycle poster. It shows the parts of the program that
-                  can block each other: supplier interface freeze, firmware integration, RF envelope
-                  proof, field validation, and steering decisions.
-                </p>
+            <article class="method-plate evidence-module artifact-module" tabindex="0">
+              <div class="artifact-intro">
+                <p class="method-index">02 / PM artifact register</p>
+                <h3>A few of the deliverables we work with.</h3>
+                <p>These artifacts structure different parts of delivery: scope, schedule, risk, ownership, communication, dependencies, and validation. They can be prepared in anonymized form when the work itself cannot be shown directly.</p>
               </div>
-              <div class="method-graphic-wrap">
-                <svg class="method-svg schedule-svg" viewBox="0 0 1120 520" role="img" aria-labelledby="schedule-title schedule-desc">
-                  <title id="schedule-title">Integrated schedule baseline for RF embedded program delivery</title>
-                  <desc id="schedule-desc">A simplified schedule baseline showing decision gates, critical path, dependency lines, integration, bench validation, and field validation.</desc>
-                  <defs>
-                    <marker id="arrow-red-schedule" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                      <path d="M 0 0 L 10 5 L 0 10 z" class="svg-fill-red"></path>
-                    </marker>
-                    <marker id="arrow-soft-schedule" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                      <path d="M 0 0 L 10 5 L 0 10 z" class="svg-fill-soft"></path>
-                    </marker>
-                  </defs>
-                  <path class="svg-rule" d="M 198 78 H 1058"></path>
-                  <g class="schedule-axis">
-                    <text x="198" y="50">W0</text>
-                    <text x="330" y="50">W2</text>
-                    <text x="462" y="50">W4</text>
-                    <text x="594" y="50">W6</text>
-                    <text x="726" y="50">W8</text>
-                    <text x="858" y="50">W10</text>
-                    <text x="990" y="50">W12</text>
-                    <path d="M 198 70 V 438"></path>
-                    <path d="M 330 70 V 438"></path>
-                    <path d="M 462 70 V 438"></path>
-                    <path d="M 594 70 V 438"></path>
-                    <path d="M 726 70 V 438"></path>
-                    <path d="M 858 70 V 438"></path>
-                    <path d="M 990 70 V 438"></path>
-                  </g>
+              <div class="artifact-strip evidence-scroll" aria-label="Project management artifact register">
+                <article><span>01</span><strong>WBS</strong><p>scope hierarchy and deliverable tree</p></article>
+                <article><span>02</span><strong>Milestone roadmap</strong><p>schedule baseline and decision gates</p></article>
+                <article><span>03</span><strong>RAID log</strong><p>risks, assumptions, issues, dependencies</p></article>
+                <article><span>04</span><strong>Stakeholder map</strong><p>influence, interest, escalation paths</p></article>
+                <article><span>05</span><strong>Dependency map</strong><p>interfaces and blocking chains</p></article>
+                <article><span>06</span><strong>Reporting cadence</strong><p>steering rhythm and decision timing</p></article>
+                <article><span>07</span><strong>Validation plan</strong><p>evidence, acceptance criteria, sequence</p></article>
+              </div>
+            </article>
 
-                  <g class="schedule-labels">
-                    <text x="44" y="112">Requirements lock</text>
-                    <text x="44" y="174">Supplier interface freeze</text>
-                    <text x="44" y="236">Firmware integration</text>
-                    <text x="44" y="298">RF bench envelope</text>
-                    <text x="44" y="360">Field validation</text>
-                    <text x="44" y="422">Steering decision</text>
-                  </g>
-
-                  <g class="schedule-bars">
-                    <rect class="bar-soft" x="198" y="92" width="252" height="28" rx="2"></rect>
-                    <rect class="bar-red" x="330" y="154" width="264" height="28" rx="2"></rect>
-                    <rect class="bar-red" x="462" y="216" width="264" height="28" rx="2"></rect>
-                    <rect class="bar-soft" x="594" y="278" width="198" height="28" rx="2"></rect>
-                    <rect class="bar-red" x="726" y="340" width="264" height="28" rx="2"></rect>
-                    <rect class="bar-gold" x="858" y="402" width="132" height="28" rx="2"></rect>
-                  </g>
-
-                  <g class="schedule-dependencies">
-                    <path class="svg-critical" marker-end="url(#arrow-red-schedule)" d="M 450 106 C 494 106 494 168 584 168"></path>
-                    <path class="svg-critical" marker-end="url(#arrow-red-schedule)" d="M 594 168 C 628 168 628 230 716 230"></path>
-                    <path class="svg-critical" marker-end="url(#arrow-red-schedule)" d="M 726 230 C 760 230 760 354 980 354"></path>
-                    <path class="svg-branch" marker-end="url(#arrow-soft-schedule)" d="M 792 292 C 832 292 832 416 858 416"></path>
-                  </g>
-
-                  <g class="schedule-gates">
-                    <path d="M 462 78 l 10 10 l -10 10 l -10 -10 z"></path>
-                    <path d="M 594 78 l 10 10 l -10 10 l -10 -10 z"></path>
-                    <path d="M 858 78 l 10 10 l -10 10 l -10 -10 z"></path>
-                    <path d="M 990 78 l 10 10 l -10 10 l -10 -10 z"></path>
-                    <text x="432" y="132">scope freeze</text>
-                    <text x="552" y="194">integration gate</text>
-                    <text x="812" y="318">field ready</text>
-                    <text x="954" y="456">go / hold</text>
-                  </g>
-
-                  <text x="198" y="484" class="svg-caption">Critical path: interface freeze to firmware integration to field validation to steering decision.</text>
+            <article class="method-plate evidence-module" tabindex="0">
+              <div class="evidence-intro">
+                <div>
+                  <p class="method-index">03 / Schedule baseline</p>
+                  <h3>The critical path, read as one thread.</h3>
+                  <p>Not a lifecycle poster. The schedule shows what can block what: the critical path descends through interface freeze, firmware integration, field validation, and the steering decision. Parallel work sits off the thread.</p>
+                </div>
+                <p class="evidence-note">Bars show progress against baseline. The dashed line is the review point. Gold diamonds mark gates.</p>
+              </div>
+              <div class="method-graphic-wrap evidence-scroll">
+                <svg class="method-svg schedule-map-svg" viewBox="0 0 1120 478" role="img" aria-labelledby="schedule-map-title schedule-map-desc">
+                  <title id="schedule-map-title">Schedule baseline with critical path and review gate</title>
+                  <desc id="schedule-map-desc">A schedule baseline showing critical path bars, parallel work, gates, progress, and a review line.</desc>
+                  <defs><marker id="gt-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="svg-fill-red"></path></marker><marker id="gt-gold" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="svg-fill-soft"></path></marker></defs>
+                  <g class="schedule-grid"><path d="M 210 66 V 428"></path><path d="M 355 66 V 428"></path><path d="M 500 66 V 428"></path><path d="M 645 66 V 428"></path><path d="M 790 66 V 428"></path><path d="M 935 66 V 428"></path><path d="M 1080 66 V 428"></path><path class="axis" d="M 210 66 H 1080"></path></g>
+                  <g class="schedule-weeks"><text x="210" y="56">W0</text><text x="355" y="56">W2</text><text x="500" y="56">W4</text><text x="645" y="56">W6</text><text x="790" y="56">W8</text><text x="935" y="56">W10</text><text x="1080" y="56">W12</text></g>
+                  <g class="schedule-gates schedule-gates-map"><path d="M 355 59 l 7 7 l -7 7 l -7 -7 z"></path><text x="355" y="36">SCOPE FREEZE</text><path d="M 790 59 l 7 7 l -7 7 l -7 -7 z"></path><text x="790" y="36">INTEGRATION GATE</text><path d="M 1080 59 l 7 7 l -7 7 l -7 -7 z"></path><text x="1080" y="36">GO / HOLD</text></g>
+                  <g class="schedule-labels-map"><text x="10" y="114">REQUIREMENTS LOCK</text><text x="10" y="172">SUPPLIER FREEZE</text><text x="10" y="230">FIRMWARE INTEGRATION</text><text x="10" y="288">RF BENCH ENVELOPE</text><text x="10" y="346">FIELD VALIDATION</text><text x="10" y="404">STEERING DECISION</text></g>
+                  <g class="critical-thread"><path d="M 355 123 V 155" marker-end="url(#gt-red)"></path><path d="M 572.5 181 V 213" marker-end="url(#gt-red)"></path><path d="M 790 239 V 329" marker-end="url(#gt-red)"></path><path d="M 1007.5 355 V 385" marker-end="url(#gt-red)"></path></g>
+                  <path class="parallel-link" d="M 790 239 V 271" marker-end="url(#gt-gold)"></path>
+                  <g class="schedule-bars-map"><rect class="critical-bar" x="210" y="97" width="145" height="26" rx="2"></rect><rect class="critical-bar" x="355" y="155" width="217.5" height="26" rx="2"></rect><rect class="critical-bar" x="572.5" y="213" width="217.5" height="26" rx="2"></rect><rect class="float-bar" x="790" y="271" width="145" height="26" rx="2"></rect><rect class="float-progress" x="790" y="271" width="72.5" height="26" rx="2"></rect><rect class="critical-empty" x="790" y="329" width="217.5" height="26" rx="2"></rect><rect class="critical-progress" x="790" y="329" width="72.5" height="26" rx="2"></rect></g>
+                  <path class="decision-diamond" d="M 1007.5 386 l 12 14 l -12 14 l -12 -14 z"></path><text class="svg-small" x="1030" y="405">go / hold</text>
+                  <path class="review-line" d="M 862.5 66 V 428"></path><text class="review-line-label" x="862.5" y="446">W9 / REVIEW</text>
+                  <g class="schedule-legend"><rect class="critical-bar" x="210" y="458" width="22" height="11" rx="1"></rect><text x="240" y="467">critical path</text><rect class="float-progress" x="360" y="458" width="22" height="11" rx="1"></rect><text x="390" y="467">parallel / float</text><path class="decision-diamond" d="M 520 456 l 8 8 l -8 8 l -8 -8 z"></path><text x="540" y="467">gate / milestone</text><path class="review-line legend-line" d="M 690 464 H 716"></path><text x="724" y="467">review line</text></g>
                 </svg>
+              </div>
+            </article>
+
+            <article class="method-plate evidence-module" tabindex="0">
+              <div class="method-split">
+                <div class="raci-copy">
+                  <p class="method-index">04 / Responsibility matrix</p>
+                  <h3>Who does what. Made explicit.</h3>
+                  <p>RACI makes responsibility and accountability visible across delivery activities. It prevents duplicate effort, hidden ownership gaps, and late escalation confusion.</p>
+                  <div class="raci-legend" aria-label="RACI legend"><span><b>R</b>Responsible</span><span><b>A</b>Accountable</span><span><b>C</b>Consulted</span><span><b>I</b>Informed</span></div>
+                </div>
+                <div class="method-graphic-wrap evidence-scroll">
+                  <svg class="method-svg raci-svg" viewBox="0 0 760 350" role="img" aria-labelledby="raci-title raci-desc">
+                    <title id="raci-title">RACI responsibility matrix</title><desc id="raci-desc">A responsibility matrix showing PM, technical lead, engineering, and steering roles across project activities.</desc>
+                    <g class="raci-head"><text x="232" y="36">PM</text><text x="382" y="36">TECH LEAD</text><text x="532" y="36">ENGINEERING</text><text x="682" y="36">STEERING</text></g><line class="raci-rule" x1="0" y1="48" x2="760" y2="48"></line>
+                    <g class="raci-rows"><text x="8" y="84">SCOPE DEFINITION</text><text x="8" y="138">WORK PLANNING</text><text x="8" y="192">INTEGRATION</text><text x="8" y="246">CHANGE CONTROL</text><text x="8" y="300">STATUS REPORTING</text></g>
+                    <g class="raci-grid-lines"><line x1="0" y1="104" x2="760" y2="104"></line><line x1="0" y1="158" x2="760" y2="158"></line><line x1="0" y1="212" x2="760" y2="212"></line><line x1="0" y1="266" x2="760" y2="266"></line><line x1="0" y1="320" x2="760" y2="320"></line></g>
+                    <g class="raci-cells"><rect class="cell-a" x="170" y="56" width="124" height="40" rx="2"></rect><text x="232" y="81">A</text><rect class="cell-r" x="320" y="56" width="124" height="40" rx="2"></rect><text x="382" y="81">R</text><rect class="cell-c" x="470" y="56" width="124" height="40" rx="2"></rect><text x="532" y="81">C</text><rect class="cell-i" x="620" y="56" width="124" height="40" rx="2"></rect><text x="682" y="81">I</text><rect class="cell-r" x="170" y="110" width="124" height="40" rx="2"></rect><text x="232" y="135">R</text><rect class="cell-a" x="320" y="110" width="124" height="40" rx="2"></rect><text x="382" y="135">A</text><rect class="cell-c" x="470" y="110" width="124" height="40" rx="2"></rect><text x="532" y="135">C</text><rect class="cell-i" x="620" y="110" width="124" height="40" rx="2"></rect><text x="682" y="135">I</text><rect class="cell-c" x="170" y="164" width="124" height="40" rx="2"></rect><text x="232" y="189">C</text><rect class="cell-r" x="320" y="164" width="124" height="40" rx="2"></rect><text x="382" y="189">R</text><rect class="cell-a" x="470" y="164" width="124" height="40" rx="2"></rect><text x="532" y="189">A</text><rect class="cell-i" x="620" y="164" width="124" height="40" rx="2"></rect><text x="682" y="189">I</text><rect class="cell-a" x="170" y="218" width="124" height="40" rx="2"></rect><text x="232" y="243">A</text><rect class="cell-c" x="320" y="218" width="124" height="40" rx="2"></rect><text x="382" y="243">C</text><rect class="cell-c" x="470" y="218" width="124" height="40" rx="2"></rect><text x="532" y="243">C</text><rect class="cell-r" x="620" y="218" width="124" height="40" rx="2"></rect><text x="682" y="243">R</text><rect class="cell-r" x="170" y="272" width="124" height="40" rx="2"></rect><text x="232" y="297">R</text><rect class="cell-c" x="320" y="272" width="124" height="40" rx="2"></rect><text x="382" y="297">C</text><rect class="cell-i" x="470" y="272" width="124" height="40" rx="2"></rect><text x="532" y="297">I</text><rect class="cell-a" x="620" y="272" width="124" height="40" rx="2"></rect><text x="682" y="297">A</text></g>
+                    <text class="svg-caption" x="8" y="342">One accountable owner per activity prevents ownership ambiguity.</text>
+                  </svg>
+                </div>
+              </div>
+            </article>
+
+            <article class="method-plate evidence-module evidence-module-risk" tabindex="0">
+              <div class="method-split method-split-reverse">
+                <div class="method-graphic-wrap evidence-scroll">
+                  <svg class="method-svg risk-svg" viewBox="0 0 520 390" role="img" aria-labelledby="risk-title risk-desc">
+                    <title id="risk-title">Risk heatmap by probability and impact</title><desc id="risk-desc">A probability and impact heatmap showing risks in monitoring and steering response zones.</desc>
+                    <text class="axis-title" x="16" y="195" transform="rotate(-90 16 195)">PROBABILITY</text><text class="axis-title" x="287" y="332">IMPACT</text>
+                    <g class="risk-axis"><text x="104" y="82">HIGH</text><text x="104" y="146">MED-H</text><text x="104" y="210">MED-L</text><text x="104" y="274">LOW</text><text x="155" y="312">LOW</text><text x="243" y="312">MED-L</text><text x="331" y="312">MED-H</text><text x="419" y="312">HIGH</text></g>
+                    <g class="risk-cells"><rect class="risk-gold-2" x="111" y="50" width="88" height="64"></rect><rect class="risk-gold-3" x="199" y="50" width="88" height="64"></rect><rect class="risk-red-1" x="287" y="50" width="88" height="64"></rect><rect class="risk-red-2" x="375" y="50" width="88" height="64"></rect><rect class="risk-gold-1" x="111" y="114" width="88" height="64"></rect><rect class="risk-gold-2" x="199" y="114" width="88" height="64"></rect><rect class="risk-gold-3" x="287" y="114" width="88" height="64"></rect><rect class="risk-red-1" x="375" y="114" width="88" height="64"></rect><rect class="risk-low" x="111" y="178" width="88" height="64"></rect><rect class="risk-low-2" x="199" y="178" width="88" height="64"></rect><rect class="risk-gold-1" x="287" y="178" width="88" height="64"></rect><rect class="risk-gold-2" x="375" y="178" width="88" height="64"></rect><rect class="risk-low" x="111" y="242" width="88" height="64"></rect><rect class="risk-low" x="199" y="242" width="88" height="64"></rect><rect class="risk-low-2" x="287" y="242" width="88" height="64"></rect><rect class="risk-gold-1" x="375" y="242" width="88" height="64"></rect></g>
+                    <g class="risk-markers"><circle cx="243" cy="78" r="5"></circle><text x="243" y="92">Supplier delay</text><circle cx="331" cy="142" r="5"></circle><text x="331" y="156">Integration risk</text><circle cx="419" cy="206" r="5"></circle><text x="419" y="220">Scope creep</text></g>
+                    <text class="svg-caption" x="111" y="372">Red zone items require steering response. Gold zone items enter the monitoring cadence.</text>
+                  </svg>
+                </div>
+                <div class="risk-copy"><p class="method-index">05 / Risk heatmap</p><h3>Visible risk before it becomes a problem.</h3><p>Risks are mapped by probability and impact so exposure is legible to technical leads and executive reviewers without exposing confidential project data.</p><p class="evidence-note">Entries draw from the RAID log. Each marker links back to an owner, mitigation action, and reporting cadence.</p></div>
               </div>
             </article>
           </div>
