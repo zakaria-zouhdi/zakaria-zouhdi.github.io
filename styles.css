@@ -29,7 +29,7 @@ body {
   margin: 0;
   min-width: 320px;
   color: var(--text);
-  font-family: "Open Sans", "Source Sans 3", Roboto, "Segoe UI", Arial, sans-serif;
+  font-family: Barlow, "Open Sans", Roboto, "Segoe UI", Arial, sans-serif;
   background:
     radial-gradient(circle at 78% 10%, rgba(201, 164, 93, 0.1), transparent 31rem),
     radial-gradient(circle at 14% 22%, rgba(143, 15, 29, 0.14), transparent 32rem),
@@ -113,7 +113,7 @@ a {
 
 .brand-name {
   color: var(--ivory);
-  font-family: Newsreader, Georgia, serif;
+  font-family: Oswald, "Barlow Condensed", "Open Sans", sans-serif;
   font-size: 1.22rem;
   font-weight: 700;
   line-height: 1;
@@ -121,7 +121,7 @@ a {
 
 .brand-line {
   color: var(--muted);
-  font-family: Roboto, "Open Sans", Arial, sans-serif;
+  font-family: "Barlow Condensed", Roboto, "Open Sans", Arial, sans-serif;
   font-size: 0.66rem;
   font-weight: 700;
   line-height: 1;
@@ -137,7 +137,7 @@ a {
 .site-nav a {
   position: relative;
   color: var(--muted);
-  font-family: Roboto, "Open Sans", Arial, sans-serif;
+  font-family: "Barlow Condensed", Roboto, "Open Sans", Arial, sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -184,7 +184,7 @@ a {
   gap: 14px;
   padding-left: 18px;
   color: var(--dim);
-  font-family: Roboto, "Open Sans", Arial, sans-serif;
+  font-family: "Barlow Condensed", Roboto, "Open Sans", Arial, sans-serif;
   font-size: 0.64rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -291,9 +291,17 @@ a {
 .hero-grid {
   position: relative;
   z-index: 2;
+  display: grid;
   width: min(100%, var(--max));
+  grid-template-columns: minmax(0, 0.96fr) minmax(300px, 0.54fr);
+  gap: clamp(36px, 6vw, 84px);
+  align-items: center;
   margin: 0 auto;
-  padding-top: clamp(84px, 14vh, 156px);
+  padding-top: clamp(70px, 12vh, 128px);
+}
+
+.hero-content {
+  max-width: 760px;
 }
 
 .eyebrow,
@@ -304,7 +312,7 @@ a {
 .approach-step > span {
   margin: 0;
   color: var(--gold);
-  font-family: Roboto, "Open Sans", Arial, sans-serif;
+  font-family: "Barlow Condensed", Roboto, "Open Sans", Arial, sans-serif;
   font-size: 0.74rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -314,24 +322,24 @@ a {
 .section h2 {
   margin: 16px 0 0;
   color: var(--ivory);
-  font-family: Newsreader, Georgia, serif;
+  font-family: Oswald, "Barlow Condensed", "Open Sans", sans-serif;
   font-weight: 600;
   letter-spacing: 0;
 }
 
 .hero h1 {
-  max-width: 860px;
-  font-size: clamp(3.1rem, 5vw, 5.2rem);
-  line-height: 0.98;
+  max-width: 740px;
+  font-size: clamp(2.75rem, 4.55vw, 4.8rem);
+  line-height: 1;
 }
 
 .hero-copy {
   max-width: 650px;
   margin: 22px 0 0;
   color: #e1d5c4;
-  font-family: "Source Sans 3", "Open Sans", Roboto, sans-serif;
-  font-size: clamp(1.08rem, 1.18vw, 1.28rem);
-  line-height: 1.56;
+  font-family: Barlow, "Open Sans", Roboto, sans-serif;
+  font-size: clamp(1.04rem, 1.08vw, 1.18rem);
+  line-height: 1.58;
 }
 
 .hero-actions {
@@ -348,7 +356,7 @@ a {
   justify-content: center;
   border: 1px solid rgba(244, 238, 227, 0.16);
   padding: 0 18px;
-  font-family: "Open Sans", Roboto, sans-serif;
+  font-family: Barlow, "Open Sans", Roboto, sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   background: rgba(8, 6, 4, 0.42);
@@ -377,14 +385,14 @@ a {
   position: relative;
   z-index: 2;
   display: flex;
-  width: min(100%, var(--max));
+  max-width: 760px;
   flex-wrap: wrap;
   gap: 10px 22px;
-  margin: 112px auto 0;
-  padding-top: 20px;
+  margin: 34px 0 0;
+  padding-top: 18px;
   color: var(--muted);
-  font-family: Roboto, "Open Sans", Arial, sans-serif;
-  font-size: 0.74rem;
+  font-family: "Barlow Condensed", Roboto, "Open Sans", Arial, sans-serif;
+  font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -401,11 +409,12 @@ a {
 
 .proof-layer span {
   position: relative;
-  transition: color 260ms ease, transform 260ms ease;
+  transition: color 260ms ease, transform 260ms ease, text-shadow 260ms ease;
 }
 
 .proof-layer span:hover {
   color: var(--ivory);
+  text-shadow: 0 0 18px rgba(201, 164, 93, 0.18);
   transform: translateY(-1px);
 }
 
@@ -418,6 +427,205 @@ a {
   height: 3px;
   transform: translateY(-50%);
   background: var(--gold);
+}
+.control-plate {
+  position: relative;
+  min-height: 368px;
+  align-self: end;
+  border: 1px solid rgba(201, 164, 93, 0.22);
+  padding: 14px;
+  background:
+    linear-gradient(135deg, rgba(255, 244, 224, 0.06), transparent 28%),
+    linear-gradient(180deg, rgba(10, 7, 5, 0.84), rgba(3, 2, 1, 0.52));
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 244, 224, 0.035),
+    0 24px 80px rgba(0, 0, 0, 0.38),
+    0 0 54px rgba(143, 15, 29, 0.1);
+  backdrop-filter: blur(18px);
+  overflow: hidden;
+  transition: transform 320ms ease, border-color 320ms ease, box-shadow 320ms ease;
+}
+
+.control-plate::before,
+.control-plate::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.control-plate::before {
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(201, 164, 93, 0.34), transparent 34%) 0 0 / 100% 1px no-repeat,
+    linear-gradient(180deg, transparent, rgba(143, 15, 29, 0.2), transparent) 72% 0 / 1px 100% no-repeat;
+  opacity: 0.7;
+}
+
+.control-plate::after {
+  right: 22px;
+  bottom: 22px;
+  width: 72px;
+  height: 1px;
+  background: rgba(143, 15, 29, 0.78);
+  box-shadow: 0 0 24px rgba(195, 24, 45, 0.46);
+}
+
+.control-plate:hover {
+  border-color: rgba(201, 164, 93, 0.44);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 244, 224, 0.052),
+    0 28px 86px rgba(0, 0, 0, 0.42),
+    0 0 70px rgba(143, 15, 29, 0.16);
+  transform: translateY(-4px);
+}
+
+.plate-shell {
+  position: relative;
+  min-height: 338px;
+  padding: 24px;
+  border: 1px solid rgba(244, 238, 227, 0.1);
+  background:
+    linear-gradient(135deg, rgba(201, 164, 93, 0.08), transparent 22%),
+    linear-gradient(180deg, rgba(7, 5, 4, 0.78), rgba(7, 5, 4, 0.36));
+}
+
+.plate-shell::before,
+.plate-shell::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.plate-shell::before {
+  left: 24px;
+  right: 24px;
+  top: 94px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201, 164, 93, 0.74), rgba(143, 15, 29, 0.46), transparent);
+  box-shadow: 0 0 24px rgba(201, 164, 93, 0.14);
+}
+
+.plate-shell::after {
+  left: 34px;
+  right: 54px;
+  bottom: 78px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(244, 238, 227, 0.18), rgba(201, 164, 93, 0.46), transparent);
+}
+
+.plate-header,
+.plate-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--dim);
+  font-family: "Barlow Condensed", Roboto, "Open Sans", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.plate-status {
+  display: grid;
+  gap: 8px;
+  margin-top: 48px;
+}
+
+.plate-status span {
+  color: var(--gold);
+  font-family: "Barlow Condensed", Roboto, "Open Sans", Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.plate-status strong {
+  color: var(--ivory);
+  font-family: Oswald, "Barlow Condensed", "Open Sans", sans-serif;
+  font-size: clamp(1.55rem, 2vw, 2.1rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.plate-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 52px;
+  padding-top: 20px;
+}
+
+.plate-track::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 6px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201, 164, 93, 0.76), rgba(143, 15, 29, 0.56), rgba(244, 238, 227, 0.2));
+}
+
+.plate-track span {
+  position: relative;
+  color: var(--muted);
+  font-family: "Barlow Condensed", Roboto, "Open Sans", Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.plate-track span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -20px;
+  width: 9px;
+  height: 9px;
+  border: 1px solid rgba(201, 164, 93, 0.72);
+  background: var(--lacquer);
+  box-shadow: 0 0 18px rgba(201, 164, 93, 0.18);
+  transform: rotate(45deg);
+}
+
+.plate-track span:nth-child(4)::before {
+  border-color: rgba(195, 24, 45, 0.9);
+  box-shadow: 0 0 22px rgba(195, 24, 45, 0.38);
+}
+
+.plate-signal {
+  position: absolute;
+  left: 30px;
+  right: 44px;
+  top: 198px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(195, 24, 45, 0.84), rgba(244, 238, 227, 0.42), transparent);
+  transform: rotate(-8deg);
+  transform-origin: left center;
+  box-shadow: 0 0 24px rgba(195, 24, 45, 0.28);
+}
+
+.plate-frames {
+  position: absolute;
+  right: 26px;
+  top: 122px;
+  display: grid;
+  gap: 10px;
+  width: 86px;
+}
+
+.plate-frames span {
+  display: block;
+  height: 30px;
+  border: 1px solid rgba(201, 164, 93, 0.2);
+  background: linear-gradient(90deg, rgba(255, 244, 224, 0.035), transparent);
+}
+
+.plate-footer {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
 }
 
 .capability-rail {
@@ -476,7 +684,7 @@ a {
   display: block;
   margin-top: 18px;
   color: var(--ivory);
-  font-family: "Open Sans", "Source Sans 3", sans-serif;
+  font-family: Barlow, "Open Sans", sans-serif;
   font-size: 1.08rem;
   font-weight: 700;
 }
@@ -535,7 +743,7 @@ a {
 .section-copy,
 .contact-panel {
   color: var(--muted);
-  font-family: "Open Sans", "Source Sans 3", Roboto, sans-serif;
+  font-family: Barlow, "Open Sans", Roboto, sans-serif;
   font-size: 1.02rem;
   line-height: 1.74;
 }
@@ -615,7 +823,7 @@ a {
 .approach-step h3 {
   margin: 0;
   color: var(--ivory);
-  font-family: "Open Sans", "Source Sans 3", sans-serif;
+  font-family: Barlow, "Open Sans", sans-serif;
   font-size: 1.18rem;
   font-weight: 700;
 }
@@ -713,7 +921,7 @@ a {
 .work-meta {
   margin-bottom: 10px;
   color: var(--gold);
-  font-family: Roboto, "Open Sans", Arial, sans-serif;
+  font-family: "Barlow Condensed", Roboto, "Open Sans", Arial, sans-serif;
   font-size: 0.67rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -836,7 +1044,7 @@ a {
 .contact-panel a {
   display: block;
   color: var(--ivory);
-  font-family: Roboto, "Open Sans", Arial, sans-serif;
+  font-family: "Barlow Condensed", Roboto, "Open Sans", Arial, sans-serif;
   font-weight: 700;
   overflow-wrap: anywhere;
   transition: color 260ms ease;
@@ -881,8 +1089,8 @@ body.enhanced .section.is-visible {
 
 @media (max-width: 1440px) {
   .hero h1 {
-    max-width: 840px;
-    font-size: clamp(3rem, 4.65vw, 4.25rem);
+    max-width: 720px;
+    font-size: clamp(2.65rem, 4.25vw, 4rem);
   }
 
   .section h2 {
@@ -890,7 +1098,7 @@ body.enhanced .section.is-visible {
   }
 
   .proof-layer {
-    margin-top: 88px;
+    margin-top: 32px;
   }
 }
 
@@ -908,7 +1116,7 @@ body.enhanced .section.is-visible {
   }
 
   .hero-grid {
-    padding-top: clamp(72px, 12vh, 116px);
+    padding-top: clamp(64px, 11vh, 104px);
   }
 
   .hero h1 {
@@ -921,7 +1129,7 @@ body.enhanced .section.is-visible {
   }
 
   .proof-layer {
-    margin-top: 68px;
+    margin-top: 32px;
   }
 
   .profile-section,
@@ -938,7 +1146,7 @@ body.enhanced .section.is-visible {
   }
 
   .hero-grid {
-    padding-top: 68px;
+    padding-top: 58px;
   }
 
   .hero-copy {
@@ -950,7 +1158,7 @@ body.enhanced .section.is-visible {
   }
 
   .proof-layer {
-    margin-top: 54px;
+    margin-top: 32px;
   }
 }
 
@@ -960,7 +1168,17 @@ body.enhanced .section.is-visible {
   }
 
   .hero-grid {
-    padding-top: 116px;
+    grid-template-columns: 1fr;
+    padding-top: 92px;
+  }
+
+  .control-plate {
+    max-width: 560px;
+    min-height: 330px;
+  }
+
+  .plate-shell {
+    min-height: 300px;
   }
 
   .hero h1 {
@@ -1036,11 +1254,15 @@ body.enhanced .section.is-visible {
   }
 
   .hero-grid {
-    padding-top: 84px;
+    padding-top: 70px;
+  }
+
+  .control-plate {
+    display: none;
   }
 
   .hero h1 {
-    font-size: clamp(2.25rem, 10.5vw, 2.85rem);
+    font-size: clamp(2.1rem, 9.6vw, 2.72rem);
   }
 
   .hero-copy {
@@ -1048,7 +1270,7 @@ body.enhanced .section.is-visible {
   }
 
   .proof-layer {
-    margin-top: 74px;
+    margin-top: 32px;
   }
 
   .proof-layer span + span::before {
@@ -1085,6 +1307,7 @@ body.enhanced .section.is-visible {
     gap: 10px;
   }
   .proof-layer span:hover,
+  .control-plate:hover,
   .profile-section:hover .section-copy,
   .service-row:hover,
   .service-row:focus-visible,
