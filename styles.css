@@ -1638,6 +1638,25 @@ body.enhanced .section.is-visible {
   text-anchor: middle;
 }
 
+.schedule-legend text {
+  fill: var(--dim);
+  font-size: 12px;
+  font-weight: 700;
+  text-anchor: start;
+  text-transform: uppercase;
+  dominant-baseline: middle;
+}
+
+.schedule-legend .legend-line {
+  stroke: rgba(201, 164, 93, 0.62);
+  stroke-width: 1.4;
+  stroke-dasharray: 5 4;
+}
+
+.schedule-legend .legend-item {
+  opacity: 0.86;
+}
+
 .schedule-gates-map path,
 .decision-diamond {
   fill: rgba(7, 5, 4, 0.8);
