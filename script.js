@@ -100,3 +100,54 @@ if (artifactControl) {
     });
   });
 }
+const methodCarousel = document.querySelector("[data-method-carousel]");
+
+if (methodCarousel) {
+  const methodTrack = methodCarousel.querySelector("[data-method-track]");
+  const methodItems = Array.from(methodCarousel.querySelectorAll(".method-plate"));
+  const methodButtons = Array.from(methodCarousel.querySelectorAll("[data-method-scroll]"));
+  let methodScrollFrame = 0;
+
+  function currentMethodIndex() {
+    if (!methodTrack || !methodItems.length) return 0;
+    const trackLeft = methodTrack.getBoundingClientRect().left;
+    return methodItems.reduce((closestIndex, item, index) => {
+      const closestDistance = Math.abs(methodItems[closestIndex].getBoundingClientRect().left - trackLeft);
+      const itemDistance = Math.abs(item.getBoundingClientRect().left - trackLeft);
+      return itemDistance < closestDistance ? index : closestIndex;
+    }, 0);
+  }
+
+  function updateMethodButtons() {
+    const index = currentMethodIndex();
+    methodButtons.forEach((button) => {
+      const isPrevious = button.dataset.methodScroll === "prev";
+      button.disabled = isPrevious ? index === 0 : index === methodItems.length - 1;
+    });
+  }
+
+  methodButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!methodTrack || !methodItems.length) return;
+      const direction = button.dataset.methodScroll === "prev" ? -1 : 1;
+      const nextIndex = Math.min(Math.max(currentMethodIndex() + direction, 0), methodItems.length - 1);
+      methodTrack.scrollTo({
+        left: methodItems[nextIndex].offsetLeft - methodTrack.offsetLeft,
+        behavior: reduceMotion.matches ? "auto" : "smooth",
+      });
+    });
+  });
+
+  if (methodTrack) {
+    methodTrack.addEventListener("scroll", () => {
+      if (methodScrollFrame) return;
+      methodScrollFrame = window.requestAnimationFrame(() => {
+        methodScrollFrame = 0;
+        updateMethodButtons();
+      });
+    });
+  }
+
+  window.addEventListener("resize", updateMethodButtons);
+  updateMethodButtons();
+}

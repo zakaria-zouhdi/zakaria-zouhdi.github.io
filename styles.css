@@ -1948,3 +1948,85 @@ body.enhanced .section.is-visible {
     font-size: 1.35rem;
   }
 }
+/* Methods carousel controls */
+.method-carousel {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  gap: 14px;
+  align-items: stretch;
+  margin-top: 64px;
+}
+
+.method-carousel .method-evidence {
+  display: flex;
+  gap: clamp(24px, 3vw, 34px);
+  margin-top: 0;
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: 4px 2px 20px;
+  scroll-padding-inline: 0;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: rgba(201, 164, 93, 0.48) rgba(244, 238, 227, 0.08);
+  scrollbar-width: thin;
+}
+
+.method-carousel .method-evidence::before {
+  display: none;
+}
+
+.method-carousel .method-evidence .method-plate {
+  flex: 0 0 100%;
+  min-width: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.method-scroll-button {
+  position: sticky;
+  top: 42vh;
+  align-self: start;
+  min-height: 220px;
+  border: 1px solid rgba(201, 164, 93, 0.34);
+  color: var(--gold);
+  font-family: "Barlow Condensed", Roboto, "Open Sans", Arial, sans-serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(180deg, rgba(8, 6, 4, 0.76), rgba(8, 6, 4, 0.34));
+  cursor: pointer;
+  transition: border-color 220ms ease, color 220ms ease, background 220ms ease, transform 220ms ease;
+}
+
+.method-scroll-button:hover,
+.method-scroll-button:focus-visible {
+  border-color: rgba(244, 238, 227, 0.5);
+  color: var(--ivory);
+  background: rgba(244, 238, 227, 0.045);
+  transform: translateY(-2px);
+}
+
+.method-scroll-button:disabled {
+  border-color: rgba(244, 238, 227, 0.12);
+  color: rgba(244, 238, 227, 0.24);
+  cursor: default;
+  transform: none;
+}
+
+.method-scroll-button:focus-visible {
+  outline: 2px solid rgba(244, 238, 227, 0.86);
+  outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .method-carousel {
+    grid-template-columns: 34px minmax(0, 1fr) 34px;
+    gap: 8px;
+    margin-top: 48px;
+  }
+
+  .method-scroll-button {
+    min-height: 168px;
+    font-size: 1.45rem;
+  }
+}
