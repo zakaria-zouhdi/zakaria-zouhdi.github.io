@@ -27,18 +27,16 @@
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="#profile">Profile</a>
           <a href="#services">Services</a>
-          <a href="#deliverables">Deliverables</a>
           <a href="#portfolio">Portfolio</a>
-          <a href="#approach">Approach</a>
+          <a href="#approach">Methods</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
       <nav class="section-index" aria-label="Section index">
         <a href="#profile">Profile</a>
         <a href="#services">Services</a>
-        <a href="#deliverables">Deliverables</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="#approach">Approach</a>
+        <a href="#approach">Methods</a>
         <a href="#contact">Contact</a>
       </nav>
       <main id="top">
@@ -141,55 +139,6 @@
             </article>
           </div>
         </section>
-
-        <section class="section deliverables-section" id="deliverables">
-          <div class="section-heading deliverables-heading">
-            <p class="section-kicker">Deliverables</p>
-            <h2>The working outputs that make technical delivery inspectable.</h2>
-          </div>
-
-          <div class="deliverable-system" data-deliverables>
-            <div class="deliverable-map" aria-label="Deliverable production flow">
-              <button class="deliverable-node is-active" type="button" data-stage="Frame" data-title="Program framing brief" data-detail="Context, stakeholders, objectives, assumptions, constraints, governance choices, and required decisions captured before delivery accelerates." data-proof="Used when the work is still ambiguous and leadership needs a clean starting point.">
-                <span>01</span>
-                <strong>Program framing brief</strong>
-                <small>context / objectives / governance</small>
-              </button>
-              <button class="deliverable-node" type="button" data-stage="Define" data-title="Requirements and acceptance map" data-detail="Business needs, technical constraints, acceptance criteria, traceability, open questions, and ownership made visible before implementation choices harden." data-proof="Useful when engineering, operations, suppliers, and management are carrying different versions of the same problem.">
-                <span>02</span>
-                <strong>Requirements and acceptance map</strong>
-                <small>needs / criteria / traceability</small>
-              </button>
-              <button class="deliverable-node" type="button" data-stage="Baseline" data-title="Integrated schedule baseline" data-detail="Milestones, dependencies, resources, estimate basis, critical path, review gates, and delivery assumptions organized into a trackable baseline." data-proof="Built so progress can be measured against something sturdier than optimism and meeting memory.">
-                <span>03</span>
-                <strong>Integrated schedule baseline</strong>
-                <small>milestones / estimates / dependencies</small>
-              </button>
-              <button class="deliverable-node" type="button" data-stage="De-risk" data-title="Risk and investigation plan" data-detail="Technical unknowns, issue hypotheses, investigation strategy, validation path, owners, fallback options, and escalation triggers structured for action." data-proof="Especially relevant for embedded, RF, pyrotechnic, and field-operational systems where failures need a disciplined search pattern.">
-                <span>04</span>
-                <strong>Risk and investigation plan</strong>
-                <small>unknowns / tests / fallbacks</small>
-              </button>
-              <button class="deliverable-node" type="button" data-stage="Validate" data-title="Integration and validation pack" data-detail="Evidence planning across embedded systems, software, RF behavior, suppliers, manufacturing constraints, field operations, and acceptance activity." data-proof="Turns validation from a late panic into a visible delivery stream with owners and decision points.">
-                <span>05</span>
-                <strong>Integration and validation pack</strong>
-                <small>evidence / suppliers / acceptance</small>
-              </button>
-              <button class="deliverable-node" type="button" data-stage="Decide" data-title="Steering and decision package" data-detail="Status, risk movement, options, change impacts, recommended decisions, and next arbitration points prepared for senior management or C-suite review." data-proof="The output that lets leadership decide without drowning in raw engineering detail.">
-                <span>06</span>
-                <strong>Steering and decision package</strong>
-                <small>status / options / arbitration</small>
-              </button>
-            </div>
-
-            <aside class="deliverable-preview" aria-live="polite">
-              <p class="preview-stage">Frame</p>
-              <h3>Program framing brief</h3>
-              <p class="preview-detail">Context, stakeholders, objectives, assumptions, constraints, governance choices, and required decisions captured before delivery accelerates.</p>
-              <p class="preview-proof">Used when the work is still ambiguous and leadership needs a clean starting point.</p>
-            </aside>
-          </div>
-        </section>
         <section class="section work-section" id="portfolio">
           <div class="section-heading work-heading">
             <p class="section-kicker">Portfolio</p>
@@ -249,43 +198,212 @@
             </article>
           </div>
         </section>
-        <section class="section approach-section" id="approach">
-          <div class="section-heading approach-heading">
-            <p class="section-kicker">Approach</p>
-            <h2>From ambiguity to controlled execution, without losing the technical detail.</h2>
+        <section class="section methods-section" id="approach">
+          <div class="section-heading methods-heading">
+            <p class="section-kicker">Methods</p>
+            <h2>How technical uncertainty gets turned into decisions.</h2>
           </div>
 
-          <div class="approach-spine">
-            <article class="approach-step" tabindex="0">
-              <span>01</span>
-              <div>
-                <h3>Clarify</h3>
+          <div class="method-stack">
+            <article class="method-plate method-plate-primary" tabindex="0">
+              <div class="method-copy">
+                <p class="method-index">01 / Investigation flow</p>
+                <h3>Wireless RF integration failure, handled as a controlled investigation.</h3>
                 <p>
-                  Situation, stakeholders, objectives, constraints, and gaps established. Scope, requirements, and the required decisions made explicit.
+                  Built for late-stage integration where bench behavior and field behavior diverge,
+                  several technical causes remain plausible, and leadership needs options instead
+                  of guesswork.
                 </p>
               </div>
-            </article>
-            <article class="approach-step" tabindex="0">
-              <span>02</span>
-              <div>
-                <h3>Structure</h3>
-                <p>
-                  Work organized into a plan: priorities, estimates, schedule, responsibilities, risk, governance, and reporting cadence.
-                </p>
+              <div class="method-graphic-wrap">
+                <svg class="method-svg investigation-svg" viewBox="0 0 1120 610" role="img" aria-labelledby="investigation-title investigation-desc">
+                  <title id="investigation-title">Risk and investigation plan for an intermittent RF integration failure</title>
+                  <desc id="investigation-desc">A controlled investigation flow showing trigger, containment, hypothesis map, parallel technical tracks, validation gate, and steering decisions.</desc>
+                  <defs>
+                    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                      <path d="M 0 0 L 10 5 L 0 10 z" class="svg-fill-red"></path>
+                    </marker>
+                    <marker id="arrow-soft" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                      <path d="M 0 0 L 10 5 L 0 10 z" class="svg-fill-soft"></path>
+                    </marker>
+                  </defs>
+
+                  <path class="svg-rule" d="M 58 96 H 1055"></path>
+                  <path class="svg-critical" marker-end="url(#arrow-red)" d="M 86 96 H 245 H 410 H 625 H 810"></path>
+
+                  <g class="svg-node svg-node-critical" tabindex="0">
+                    <rect x="42" y="54" width="138" height="84" rx="2"></rect>
+                    <text x="62" y="82">Trigger</text>
+                    <text x="62" y="107" class="svg-small">intermittent RF</text>
+                    <text x="62" y="126" class="svg-small">loss in integration</text>
+                  </g>
+                  <g class="svg-node" tabindex="0">
+                    <rect x="224" y="54" width="144" height="84" rx="2"></rect>
+                    <text x="244" y="82">Contain</text>
+                    <text x="244" y="107" class="svg-small">freeze variables</text>
+                    <text x="244" y="126" class="svg-small">protect baseline</text>
+                  </g>
+                  <g class="svg-node" tabindex="0">
+                    <rect x="410" y="54" width="166" height="84" rx="2"></rect>
+                    <text x="430" y="82">Hypothesis map</text>
+                    <text x="430" y="107" class="svg-small">rank likely causes</text>
+                    <text x="430" y="126" class="svg-small">assign owners</text>
+                  </g>
+                  <g class="svg-node" tabindex="0">
+                    <rect x="626" y="54" width="164" height="84" rx="2"></rect>
+                    <text x="646" y="82">Parallel tracks</text>
+                    <text x="646" y="107" class="svg-small">RF / embedded</text>
+                    <text x="646" y="126" class="svg-small">power / setup</text>
+                  </g>
+                  <g class="svg-node svg-gate" tabindex="0">
+                    <rect x="838" y="54" width="152" height="84" rx="2"></rect>
+                    <text x="858" y="82">Validation gate</text>
+                    <text x="858" y="107" class="svg-small">repeatability and</text>
+                    <text x="858" y="126" class="svg-small">acceptance evidence</text>
+                  </g>
+
+                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 494 142 V 206 H 274"></path>
+                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 494 142 V 206 H 514"></path>
+                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 494 142 V 348 H 274"></path>
+                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 494 142 V 348 H 514"></path>
+
+                  <g class="track-card track-rf" tabindex="0">
+                    <rect x="72" y="202" width="270" height="118" rx="2"></rect>
+                    <text x="96" y="232">RF path</text>
+                    <text x="96" y="259" class="svg-small">signal strength / antenna position</text>
+                    <text x="96" y="280" class="svg-small">interference scan / range envelope</text>
+                    <text x="96" y="301" class="svg-small">bench-to-field delta logged</text>
+                  </g>
+                  <g class="track-card" tabindex="0">
+                    <rect x="392" y="202" width="270" height="118" rx="2"></rect>
+                    <text x="416" y="232">Embedded path</text>
+                    <text x="416" y="259" class="svg-small">timing / pairing state</text>
+                    <text x="416" y="280" class="svg-small">packet loss / firmware edge cases</text>
+                    <text x="416" y="301" class="svg-small">instrumented logs compared</text>
+                  </g>
+                  <g class="track-card" tabindex="0">
+                    <rect x="72" y="344" width="270" height="118" rx="2"></rect>
+                    <text x="96" y="374">Power path</text>
+                    <text x="96" y="401" class="svg-small">transient drops / load behavior</text>
+                    <text x="96" y="422" class="svg-small">battery state / reset conditions</text>
+                    <text x="96" y="443" class="svg-small">failure window reproduced</text>
+                  </g>
+                  <g class="track-card" tabindex="0">
+                    <rect x="392" y="344" width="270" height="118" rx="2"></rect>
+                    <text x="416" y="374">Integration path</text>
+                    <text x="416" y="401" class="svg-small">test setup variance / supplier config</text>
+                    <text x="416" y="422" class="svg-small">environmental repeatability</text>
+                    <text x="416" y="443" class="svg-small">scenario matrix controlled</text>
+                  </g>
+
+                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 662 260 H 726 V 402 H 814"></path>
+                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 662 402 H 814"></path>
+                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 342 260 H 706 V 402 H 814"></path>
+                  <path class="svg-branch" marker-end="url(#arrow-soft)" d="M 342 402 H 814"></path>
+
+                  <g class="decision-card" tabindex="0">
+                    <rect x="814" y="210" width="246" height="286" rx="2"></rect>
+                    <text x="840" y="242">Decision outputs</text>
+                    <circle cx="846" cy="278" r="4"></circle>
+                    <text x="864" y="284" class="svg-small">accept fix</text>
+                    <circle cx="846" cy="318" r="4"></circle>
+                    <text x="864" y="324" class="svg-small">extend validation</text>
+                    <circle cx="846" cy="358" r="4"></circle>
+                    <text x="864" y="364" class="svg-small">change integration constraint</text>
+                    <circle cx="846" cy="398" r="4"></circle>
+                    <text x="864" y="404" class="svg-small">escalate supplier</text>
+                    <circle cx="846" cy="438" r="4"></circle>
+                    <text x="864" y="444" class="svg-small">revise rollout plan</text>
+                  </g>
+
+                  <path class="svg-critical" marker-end="url(#arrow-red)" d="M 914 138 V 194"></path>
+                  <text x="42" y="552" class="svg-caption">Semantic accent: red marks the active failure path; gold marks formal decision gates.</text>
+                </svg>
               </div>
             </article>
-            <article class="approach-step" tabindex="0">
-              <span>03</span>
-              <div>
-                <h3>Control</h3>
+
+            <article class="method-plate" tabindex="0">
+              <div class="method-copy">
+                <p class="method-index">02 / Schedule baseline</p>
+                <h3>Integrated schedule built around gates, evidence, and decision timing.</h3>
                 <p>
-                  Execution supported through baseline tracking, change control, validation evidence, reporting, and decision support through to close.
+                  The schedule is not a lifecycle poster. It shows the parts of the program that
+                  can block each other: supplier interface freeze, firmware integration, RF envelope
+                  proof, field validation, and steering decisions.
                 </p>
+              </div>
+              <div class="method-graphic-wrap">
+                <svg class="method-svg schedule-svg" viewBox="0 0 1120 520" role="img" aria-labelledby="schedule-title schedule-desc">
+                  <title id="schedule-title">Integrated schedule baseline for RF embedded program delivery</title>
+                  <desc id="schedule-desc">A simplified schedule baseline showing decision gates, critical path, dependency lines, integration, bench validation, and field validation.</desc>
+                  <defs>
+                    <marker id="arrow-red-schedule" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                      <path d="M 0 0 L 10 5 L 0 10 z" class="svg-fill-red"></path>
+                    </marker>
+                    <marker id="arrow-soft-schedule" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                      <path d="M 0 0 L 10 5 L 0 10 z" class="svg-fill-soft"></path>
+                    </marker>
+                  </defs>
+                  <path class="svg-rule" d="M 198 78 H 1058"></path>
+                  <g class="schedule-axis">
+                    <text x="198" y="50">W0</text>
+                    <text x="330" y="50">W2</text>
+                    <text x="462" y="50">W4</text>
+                    <text x="594" y="50">W6</text>
+                    <text x="726" y="50">W8</text>
+                    <text x="858" y="50">W10</text>
+                    <text x="990" y="50">W12</text>
+                    <path d="M 198 70 V 438"></path>
+                    <path d="M 330 70 V 438"></path>
+                    <path d="M 462 70 V 438"></path>
+                    <path d="M 594 70 V 438"></path>
+                    <path d="M 726 70 V 438"></path>
+                    <path d="M 858 70 V 438"></path>
+                    <path d="M 990 70 V 438"></path>
+                  </g>
+
+                  <g class="schedule-labels">
+                    <text x="44" y="112">Requirements lock</text>
+                    <text x="44" y="174">Supplier interface freeze</text>
+                    <text x="44" y="236">Firmware integration</text>
+                    <text x="44" y="298">RF bench envelope</text>
+                    <text x="44" y="360">Field validation</text>
+                    <text x="44" y="422">Steering decision</text>
+                  </g>
+
+                  <g class="schedule-bars">
+                    <rect class="bar-soft" x="198" y="92" width="252" height="28" rx="2"></rect>
+                    <rect class="bar-red" x="330" y="154" width="264" height="28" rx="2"></rect>
+                    <rect class="bar-red" x="462" y="216" width="264" height="28" rx="2"></rect>
+                    <rect class="bar-soft" x="594" y="278" width="198" height="28" rx="2"></rect>
+                    <rect class="bar-red" x="726" y="340" width="264" height="28" rx="2"></rect>
+                    <rect class="bar-gold" x="858" y="402" width="132" height="28" rx="2"></rect>
+                  </g>
+
+                  <g class="schedule-dependencies">
+                    <path class="svg-critical" marker-end="url(#arrow-red-schedule)" d="M 450 106 C 494 106 494 168 584 168"></path>
+                    <path class="svg-critical" marker-end="url(#arrow-red-schedule)" d="M 594 168 C 628 168 628 230 716 230"></path>
+                    <path class="svg-critical" marker-end="url(#arrow-red-schedule)" d="M 726 230 C 760 230 760 354 980 354"></path>
+                    <path class="svg-branch" marker-end="url(#arrow-soft-schedule)" d="M 792 292 C 832 292 832 416 858 416"></path>
+                  </g>
+
+                  <g class="schedule-gates">
+                    <path d="M 462 78 l 10 10 l -10 10 l -10 -10 z"></path>
+                    <path d="M 594 78 l 10 10 l -10 10 l -10 -10 z"></path>
+                    <path d="M 858 78 l 10 10 l -10 10 l -10 -10 z"></path>
+                    <path d="M 990 78 l 10 10 l -10 10 l -10 -10 z"></path>
+                    <text x="432" y="132">scope freeze</text>
+                    <text x="552" y="194">integration gate</text>
+                    <text x="812" y="318">field ready</text>
+                    <text x="954" y="456">go / hold</text>
+                  </g>
+
+                  <text x="198" y="484" class="svg-caption">Critical path: interface freeze to firmware integration to field validation to steering decision.</text>
+                </svg>
               </div>
             </article>
           </div>
         </section>
-
         <section class="section contact-section" id="contact">
           <div>
             <p class="section-kicker">Contact</p>
